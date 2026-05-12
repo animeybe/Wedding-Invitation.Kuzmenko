@@ -1,0 +1,88 @@
+@import "../../styles/variables";
+
+.footer {
+  padding: 64px 20px 32px;
+  background: $color-bg-footer;
+  color: $color-text-primary;
+  text-align: center;
+
+  &__container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  &__names {
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    font-weight: 600;
+    color: $color-accent;
+    margin-bottom: 8px;
+
+    .ampersand {
+      font-family: $font-accent;
+    }
+  }
+
+  &__date {
+    font-size: 1rem;
+    letter-spacing: 0.12em;
+    color: $color-text-secondary;
+    margin-bottom: 24px;
+  }
+
+  &__text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: $color-text-primary;
+    margin-bottom: 28px;
+  }
+
+  &__divider {
+    width: 60px;
+    height: 1px;
+    background: $color-accent;
+    margin: 0 auto 24px;
+    opacity: 0.6;
+  }
+
+  &__thanks {
+    font-size: 1rem;
+    color: $color-accent;
+    margin-bottom: 24px;
+  }
+
+  &__copyright {
+    font-size: 0.8rem;
+    color: $color-text-secondary;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 48px 16px 24px;
+    &__text {
+      font-size: 0.95rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 40px 12px 20px;
+    &__names {
+      font-size: 1.6rem;
+    }
+    &__date {
+      font-size: 0.9rem;
+    }
+    &__text {
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+    &__thanks {
+      font-size: 0.9rem;
+    }
+    &__copyright {
+      font-size: 0.75rem;
+    }
+  }
+}

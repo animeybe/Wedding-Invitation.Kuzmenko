@@ -1,0 +1,128 @@
+@import "../../styles/variables";
+
+.rsvp-section {
+  padding: 80px 20px;
+
+  &__container {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__card {
+    background: $color-bg-card;
+    border-radius: $radius-lg;
+    padding: 48px 40px;
+    text-align: center;
+    box-shadow: $shadow-card;
+  }
+
+  &__title {
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    color: $color-text-primary;
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+
+  &__text {
+    font-size: 1.05rem;
+    color: $color-text-secondary;
+    line-height: 1.7;
+    margin-bottom: 32px;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 48px;
+    background: $color-accent;
+    color: #fff;
+    border: none;
+    border-radius: $radius-xl;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    animation: breathe 3s ease-in-out infinite;
+
+    &:hover {
+      background: $color-accent-hover;
+      animation: none;
+    }
+  }
+
+  &__button-text {
+    letter-spacing: 0.04em;
+  }
+
+  &__button-icon {
+    font-size: 1.3rem;
+  }
+
+  &__deadline {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: $color-text-light;
+
+    strong {
+      color: $color-text-secondary;
+      font-weight: 600;
+    }
+  }
+}
+
+@keyframes breathe {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+}
+
+@media (max-width: 768px) {
+  .rsvp-section {
+    padding: 60px 16px;
+    &__card {
+      padding: 36px 28px;
+      border-radius: 20px;
+    }
+    &__button {
+      padding: 16px 40px;
+      font-size: 1.1rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .rsvp-section {
+    padding: 48px 12px;
+    &__card {
+      padding: 32px 20px;
+      border-radius: $radius-md;
+    }
+    &__title {
+      font-size: 1.5rem;
+    }
+    &__text {
+      font-size: 0.95rem;
+      margin-bottom: 24px;
+    }
+    &__button {
+      padding: 14px 36px;
+      font-size: 1rem;
+      gap: 8px;
+    }
+    &__button-icon {
+      font-size: 1.1rem;
+    }
+    &__deadline {
+      font-size: 0.85rem;
+    }
+  }
+}

@@ -1,0 +1,76 @@
+@import "../../styles/variables";
+
+.countdown {
+  padding: 80px 20px;
+  text-align: center;
+
+  &__container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    color: $color-text-primary;
+    margin-bottom: 40px;
+  }
+
+  &__subtitle {
+    font-size: 1.1rem;
+    color: $color-text-secondary;
+  }
+
+  &__grid {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: $color-bg-card;
+    border-radius: $radius-md;
+    padding: 20px 16px;
+    min-width: 100px;
+    box-shadow: $shadow-card;
+    border: 2px dashed $color-accent-light;
+  }
+
+  &__number {
+    font-family: $font-heading;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 600;
+    color: $color-accent;
+    line-height: 1;
+  }
+
+  &__label {
+    font-size: 0.85rem;
+    color: $color-text-light;
+    margin-top: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+}
+
+@media (max-width: 480px) {
+  .countdown {
+    padding: 48px 12px;
+    &__grid {
+      gap: 8px;
+    }
+    &__item {
+      min-width: 70px;
+      padding: 16px 10px;
+      border-radius: 12px;
+    }
+    &__number {
+      font-size: 1.6rem;
+    }
+    &__label {
+      font-size: 0.7rem;
+    }
+  }
+}

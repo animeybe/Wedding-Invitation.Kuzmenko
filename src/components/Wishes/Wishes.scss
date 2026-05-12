@@ -1,0 +1,90 @@
+@import "../../styles/variables";
+
+.wishes {
+  padding: 80px 20px;
+
+  &__container {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    text-align: center;
+    color: $color-text-primary;
+    margin-bottom: 16px;
+  }
+
+  &__subtitle {
+    text-align: center;
+    color: $color-text-secondary;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 48px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 28px;
+    background: $color-bg-card;
+    border-radius: $radius-md;
+    box-shadow: $shadow-card;
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: translateX(6px);
+    }
+  }
+
+  &__icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+  }
+
+  &__content {
+    flex: 1;
+  }
+
+  &__item-title {
+    font-size: 1.3rem;
+    color: $color-text-primary;
+    margin-bottom: 8px;
+  }
+
+  &__item-text {
+    font-size: 1rem;
+    color: $color-text-secondary;
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 480px) {
+  .wishes {
+    padding: 48px 12px;
+    &__item {
+      padding: 20px;
+      gap: 14px;
+      border-radius: 12px;
+    }
+    &__icon {
+      font-size: 1.6rem;
+    }
+    &__item-title {
+      font-size: 1.15rem;
+    }
+    &__item-text {
+      font-size: 0.95rem;
+    }
+  }
+}

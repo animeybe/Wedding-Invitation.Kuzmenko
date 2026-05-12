@@ -1,0 +1,167 @@
+@import "../../styles/variables";
+
+.about-us {
+  padding: 80px 20px;
+  text-align: center;
+
+  &__container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: $color-text-primary;
+    margin-bottom: 12px;
+  }
+
+  &__subtitle {
+    color: $color-text-secondary;
+    font-size: 1.1rem;
+    margin-bottom: 48px;
+  }
+
+  &__cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  &__card {
+    flex: 1;
+    max-width: 280px;
+  }
+
+  &__polaroid {
+    background: $color-bg-card;
+    padding: 12px 12px 24px;
+    border: 2px dashed $color-accent-light;
+    box-shadow:
+      0 4px 16px rgba(0, 0, 0, 0.1),
+      0 1px 4px rgba(0, 0, 0, 0.05);
+    transform: rotate(-2deg);
+    transition: transform 0.3s ease;
+    
+
+    &:hover {
+      transform: rotate(0deg) scale(1.03);
+    }
+  }
+
+  &__photo {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background: #f0ebe0;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: sepia(0.15) brightness(0.95);
+  }
+
+  &__caption {
+    padding-top: 14px;
+    font-family: "Bad Script", cursive;
+    font-size: 1.5rem;
+    color: $color-dark;
+    text-align: center;
+    line-height: 1;
+  }
+
+  &__plus {
+    font-family: $font-accent;
+    font-size: 8rem;
+    color: $color-accent;
+    flex-shrink: 0;
+    line-height: 1;
+  }
+
+  &__grown-up {
+    margin-top: 36px;
+    text-align: center;
+    font-size: 1.3rem;
+    color: $color-text-secondary;
+  }
+
+  &__grown-up-text {
+    font-family: $font-body;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 12px;
+  }
+
+  &__grown-up-date {
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 4px;
+  }
+}
+
+.about-us__card:last-child .about-us__polaroid {
+  transform: rotate(3deg);
+  &:hover {
+    transform: rotate(0deg) scale(1.03);
+  }
+}
+
+@media (max-width: 768px) {
+  .about-us {
+    padding: 60px 16px;
+    &__polaroid {
+      padding: 10px 10px 20px;
+    }
+    &__caption {
+      font-size: 1.3rem;
+    }
+    &__plus {
+      font-size: 6rem;
+    }
+    &__grown-up {
+      margin-top: 32px;
+    }
+    &__grown-up-text {
+      font-size: 1.05rem;
+    }
+    &__grown-up-date {
+      font-size: 1.15rem;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .about-us {
+    &__cards {
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+    &__card {
+      max-width: 260px;
+    }
+    &__polaroid {
+      padding: 8px 8px 18px;
+    }
+    &__caption {
+      font-size: 1.3rem;
+      padding-top: 10px;
+    }
+    &__plus {
+      font-size: 5rem;
+      margin: -16px 0;
+    }
+    &__grown-up {
+      margin-top: 28px;
+    }
+    &__grown-up-text {
+      font-size: 0.95rem;
+    }
+    &__grown-up-date {
+      font-size: 1.1rem;
+    }
+  }
+}

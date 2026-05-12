@@ -1,0 +1,167 @@
+@import "../../styles/variables";
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.modal {
+  background: $color-bg-card;
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  max-width: 440px;
+  width: 100%;
+  position: relative;
+  animation: modalFadeIn 0.3s ease;
+
+  &__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #999;
+  }
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+  }
+
+  &__subtitle {
+    color: $color-text-secondary;
+    margin-bottom: 1.5rem;
+  }
+
+  &__text {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    color: $color-text-secondary;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+    color: $color-text-secondary;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.25rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+    background: $color-bg-card;
+    box-sizing: border-box;
+  }
+
+  &__textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.25rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+    background: $color-bg-card;
+    box-sizing: border-box;
+    resize: vertical;
+  }
+
+  &__char-count {
+    font-size: 0.75rem;
+    color: $color-text-light;
+    display: block;
+    text-align: right;
+  }
+
+  &__fieldset {
+    border: none;
+    padding: 0;
+    margin-bottom: 0.75rem;
+
+    legend {
+      font-size: 0.9rem;
+      color: $color-text-secondary;
+      margin-bottom: 0.25rem;
+    }
+  }
+
+  &__radio-group {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  &__radio-label {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.85rem;
+    background: #f5f5f5;
+    padding: 0.5rem 0.75rem;
+    border-radius: $radius-sm;
+    cursor: pointer;
+
+    input[type="radio"] {
+      accent-color: $color-accent;
+      margin: 0;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 0.75rem;
+    background: $color-accent;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+
+    &:hover {
+      background: $color-accent-hover;
+    }
+    &:disabled {
+      background: #dcc9a0;
+      cursor: not-allowed;
+    }
+  }
+
+  &__error {
+    color: #d44;
+    text-align: center;
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+  }
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
