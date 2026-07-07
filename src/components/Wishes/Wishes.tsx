@@ -12,19 +12,6 @@ export const Wishes = () => {
 
         <div className="wishes__list">
           <div className="wishes__item">
-            <span className="wishes__icon">🍷</span>
-            <div className="wishes__content">
-              <h3 className="wishes__item-title">Хороший алкоголь</h3>
-              <p className="wishes__item-text">
-                Не подумайте, мы не алкоголики! Просто хочется поставить на
-                полку пару бутылок чего-то особенного — для будущих праздников,
-                годовщин и встреч с друзьями. Виски, коньяк, хорошее вино — всё,
-                что благородно стареет и открывается по случаю.
-              </p>
-            </div>
-          </div>
-
-          <div className="wishes__item">
             <span className="wishes__icon">🏠</span>
             <div className="wishes__content">
               <h3 className="wishes__item-title">Вклад в семейное гнёздышко</h3>

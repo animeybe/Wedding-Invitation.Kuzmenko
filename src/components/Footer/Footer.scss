@@ -1,88 +1,115 @@
-@import "../../styles/variables";
-
 .footer {
-  padding: 64px 20px 32px;
-  background: $color-bg-footer;
-  color: $color-text-primary;
+  padding: 80px 32px 40px;
+  background: var(--color-bg-footer);
+  color: var(--color-text-primary);
   text-align: center;
 
   &__container {
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
   }
 
   &__names {
-    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    font-size: clamp(2.4rem, 5vw, 3.6rem);
     font-weight: 600;
-    color: $color-accent;
-    margin-bottom: 8px;
+    color: var(--color-accent);
+    margin-bottom: 12px;
 
     .ampersand {
-      font-family: $font-accent;
+      font-family: var(--font-accent);
     }
   }
 
   &__date {
-    font-size: 1rem;
+    font-size: 1.6rem;
     letter-spacing: 0.12em;
-    color: $color-text-secondary;
-    margin-bottom: 24px;
+    color: var(--color-text-secondary);
+    margin-bottom: 32px;
   }
 
   &__text {
-    font-size: 1rem;
+    font-size: 1.3rem;
     line-height: 1.7;
-    color: $color-text-primary;
-    margin-bottom: 28px;
+    color: var(--color-text-primary);
+    margin-bottom: 36px;
   }
 
   &__divider {
-    width: 60px;
+    width: 80px;
     height: 1px;
-    background: $color-accent;
-    margin: 0 auto 24px;
+    background: var(--color-accent);
+    margin: 0 auto 32px;
     opacity: 0.6;
   }
 
   &__thanks {
-    font-size: 1rem;
-    color: $color-accent;
-    margin-bottom: 24px;
+    font-size: 1.3rem;
+    color: var(--color-accent);
+    margin-bottom: 32px;
   }
 
   &__copyright {
-    font-size: 0.8rem;
-    color: $color-text-secondary;
+    font-size: 1rem;
+    color: var(--color-text-secondary);
   }
 }
 
 @media (max-width: 768px) {
   .footer {
-    padding: 48px 16px 24px;
+    padding: 60px 24px 32px;
+
+    &__names {
+      font-size: 2rem;
+    }
+
+    &__date {
+      font-size: 1.3rem;
+    }
+
     &__text {
-      font-size: 0.95rem;
+      font-size: 1.1rem;
+    }
+
+    &__thanks {
+      font-size: 1.1rem;
+    }
+
+    &__copyright {
+      font-size: 0.9rem;
     }
   }
 }
 
 @media (max-width: 480px) {
   .footer {
-    padding: 40px 12px 20px;
+    padding: 48px 16px 24px;
+
     &__names {
-      font-size: 1.6rem;
+      font-size: 1.8rem;
     }
+
     &__date {
-      font-size: 0.9rem;
+      font-size: 1.1rem;
+      margin-bottom: 24px;
     }
+
     &__text {
-      font-size: 0.9rem;
+      font-size: 1rem;
       line-height: 1.6;
+      margin-bottom: 28px;
     }
+
+    &__divider {
+      margin-bottom: 24px;
+    }
+
     &__thanks {
-      font-size: 0.9rem;
+      font-size: 1rem;
+      margin-bottom: 24px;
     }
+
     &__copyright {
-      font-size: 0.75rem;
+      font-size: 0.85rem;
     }
   }
 }

@@ -1,27 +1,25 @@
-@import "../../styles/variables";
-
 .wishes {
-  padding: 80px 20px;
+  padding: 140px 32px;
 
   &__container {
-    max-width: 700px;
+    max-width: 1200px;
     margin: 0 auto;
   }
 
   &__title {
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: clamp(3rem, 7vw, 4.5rem);
     text-align: center;
-    color: $color-text-primary;
+    color: var(--color-text-primary);
     margin-bottom: 16px;
   }
 
   &__subtitle {
     text-align: center;
-    color: $color-text-secondary;
-    font-size: 1.1rem;
+    color: var(--color-text-secondary);
+    font-size: 1.6rem;
     line-height: 1.7;
-    margin-bottom: 48px;
-    max-width: 500px;
+    margin-bottom: 64px;
+    max-width: 700px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -29,17 +27,17 @@
   &__list {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 32px;
   }
 
   &__item {
     display: flex;
     align-items: flex-start;
-    gap: 20px;
-    padding: 28px;
-    background: $color-bg-card;
-    border-radius: $radius-md;
-    box-shadow: $shadow-card;
+    gap: 28px;
+    padding: 36px;
+    background: var(--color-bg-card);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
     transition: transform 0.2s ease;
 
     &:hover {
@@ -48,7 +46,7 @@
   }
 
   &__icon {
-    font-size: 2rem;
+    font-size: 2.4rem;
     flex-shrink: 0;
   }
 
@@ -57,34 +55,79 @@
   }
 
   &__item-title {
-    font-size: 1.3rem;
-    color: $color-text-primary;
-    margin-bottom: 8px;
+    font-size: 2rem;
+    color: var(--color-text-primary);
+    margin-bottom: 12px;
   }
 
   &__item-text {
-    font-size: 1rem;
-    color: $color-text-secondary;
+    font-size: 1.3rem;
+    color: var(--color-text-secondary);
     line-height: 1.7;
+  }
+}
+
+@media (max-width: 768px) {
+  .wishes {
+    padding: 80px 24px;
+
+    &__subtitle {
+      font-size: 1.3rem;
+      margin-bottom: 48px;
+    }
+
+    &__item {
+      padding: 28px;
+      gap: 20px;
+    }
+
+    &__icon {
+      font-size: 2rem;
+    }
+
+    &__item-title {
+      font-size: 1.6rem;
+    }
+
+    &__item-text {
+      font-size: 1.15rem;
+    }
   }
 }
 
 @media (max-width: 480px) {
   .wishes {
-    padding: 48px 12px;
+    padding: 72px 16px;
+
+    &__title {
+      font-size: 2.4rem;
+    }
+
+    &__subtitle {
+      font-size: 1.2rem;
+      margin-bottom: 40px;
+    }
+
+    &__list {
+      gap: 24px;
+    }
+
     &__item {
       padding: 20px;
       gap: 14px;
       border-radius: 12px;
     }
+
     &__icon {
-      font-size: 1.6rem;
+      font-size: 1.8rem;
     }
+
     &__item-title {
-      font-size: 1.15rem;
+      font-size: 1.4rem;
     }
+
     &__item-text {
-      font-size: 0.95rem;
+      font-size: 1.05rem;
     }
   }
 }

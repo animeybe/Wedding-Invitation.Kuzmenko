@@ -36,7 +36,7 @@ export const AboutUs = () => {
             <div className="about-us__polaroid">
               <div className="about-us__photo">
                 <img
-                  src="/images/groom.jpg"
+                  src="/images/kids/groom_3.jpg"
                   alt={wedding.groom}
                   className="about-us__image"
                   loading="lazy"
@@ -52,13 +52,13 @@ export const AboutUs = () => {
             <div className="about-us__polaroid">
               <div className="about-us__photo">
                 <img
-                  src="/images/bride.jpg"
+                  src="/images/kids/bride_2.jpg"
                   alt={wedding.bride}
                   className="about-us__image"
                   loading="lazy"
                 />
               </div>
-              <div className="about-us__caption">Настя, 5 лет</div>
+              <div className="about-us__caption">Настя, 6 лет</div>
             </div>
           </div>
         </div>

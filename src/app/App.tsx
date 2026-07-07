@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Hero } from "../components/Hero/Hero";
 import { Countdown } from "../components/Countdown/Countdown";
 import { AboutUs } from "../components/AboutUs/AboutUs";
-import { Gallery } from "../components/Gallery/Gallery";
+import { Program } from "../components/Program/Program";
 import { Venue } from "../components/Venue/Venue";
 import { Wishes } from "../components/Wishes/Wishes";
 import { RSVPSection } from "../components/RSVPSection/RSVPSection";
@@ -22,7 +22,7 @@ const App = () => {
       <main className="content">
         <Countdown />
         <AboutUs />
-        <Gallery />
+        <Program />
         <Venue />
         <Wishes />
         <RSVPSection onOpen={() => setModalOpen(true)} />

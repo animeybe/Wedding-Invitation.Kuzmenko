@@ -1,38 +1,32 @@
-// ============================================
-// ЦВЕТОВАЯ ПАЛИТРА
-// ============================================
-$color-bg-primary: #faf6f0;
-$color-bg-card: #fff;
-$color-bg-footer: #f3efe8;
-$color-text-primary: #5c5548;
-$color-text-secondary: #8a8578;
-$color-text-light: #aaa;
-$color-accent: #c9a96e;
-$color-accent-hover: #b8924f;
-$color-accent-light: rgba(201, 169, 110, 0.25);
-$color-accent-glow: rgba(201, 169, 110, 0.3);
-$color-dark: #4a3a2a;
-$color-overlay: rgba(0, 0, 0, 0.35);
+:root {
+  /* Цвета */
+  --color-bg-primary: #faf6f0;
+  --color-bg-card: #fff;
+  --color-bg-footer: #f3efe8;
+  --color-text-primary: #5c5548;
+  --color-text-secondary: #8a8578;
+  --color-text-light: #aaa;
+  --color-accent: #c9a96e;
+  --color-accent-hover: #b8924f;
+  --color-accent-light: rgba(201, 169, 110, 0.25);
+  --color-accent-glow: rgba(201, 169, 110, 0.3);
+  --color-dark: #4a3a2a;
+  --color-overlay: rgba(0, 0, 0, 0.35);
 
-// ============================================
-// ТИПОГРАФИКА
-// ============================================
-$font-heading: "Lobster", cursive;
-$font-body: "Neucha", cursive;
-$font-accent: "Marck Script", cursive;
+  /* Типографика */
+  --font-heading: "Lobster", cursive;
+  --font-body: "Neucha", cursive;
+  --font-accent: "Marck Script", cursive;
 
-// ============================================
-// РАЗМЕРЫ
-// ============================================
-$radius-sm: 8px;
-$radius-md: 16px;
-$radius-lg: 24px;
-$radius-xl: 50px;
+  /* Радиусы */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 50px;
 
-// ============================================
-// ТЕНИ
-// ============================================
-$shadow-card: 0 4px 20px rgba(0, 0, 0, 0.06);
-$shadow-card-hover: 0 8px 40px rgba(0, 0, 0, 0.1);
-$shadow-button: 0 4px 20px $color-accent-glow;
-$shadow-button-hover: 0 8px 32px rgba(201, 169, 110, 0.5);
+  /* Тени */
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.06);
+  --shadow-card-hover: 0 8px 40px rgba(0, 0, 0, 0.1);
+  --shadow-button: 0 4px 20px var(--color-accent-glow);
+  --shadow-button-hover: 0 8px 32px rgba(201, 169, 110, 0.5);
+}

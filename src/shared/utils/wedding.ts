@@ -8,8 +8,8 @@ export const wedding = {
     address: import.meta.env.VITE_VENUE_ADDRESS,
   },
   get arrivalTime(): string {
-    const early = new Date(this.date.getTime() - 60 * 60 * 1000);
-    const late = new Date(this.date.getTime() - 30 * 60 * 1000);
+    const early = new Date(this.date.getTime() - 30 * 60 * 1000);
+    const late = new Date(this.date.getTime() - 15 * 60 * 1000);
     const format = (d: Date) =>
       `${String(d.getHours()).padStart(2, "0")}:${String(d.getMinutes()).padStart(2, "0")}`;
     return `${format(early)} – ${format(late)}`;
